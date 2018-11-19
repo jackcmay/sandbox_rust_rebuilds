@@ -1,0 +1,16 @@
+[package]
+name = "root"
+version = "0.1.0"
+
+[dependencies]
+reqwest = "0.9.0"
+
+[workspace]
+members = [
+   ".",
+   "member",
+]
+default-members = [
+   ".",
+   "member",
+]
