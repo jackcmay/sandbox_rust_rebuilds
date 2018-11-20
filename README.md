@@ -1,4 +1,7 @@
 
+# Cargo rebuilds already built member
+
+
 To reproduce:
 
 ```sh
@@ -8,7 +11,7 @@ $ cargo build
 $ cargo build -p memeber
 ```
 
-For each command above the member is rebuilt, its should not be.  The root is also rebuild for each `cargo build` command.
+For each command above the member is rebuilt, it should not be.  The root is also rebuild for each `cargo build` command.
 
 Example output:
 ```
@@ -23,6 +26,8 @@ $ cargo build
 ```
 
 To get rid of the rebuild problem you can:
+
+* Specify the same dependencies in both Cargo.toml files
 
 
 * Comment out the `request` dependency in the root Cargo.toml
